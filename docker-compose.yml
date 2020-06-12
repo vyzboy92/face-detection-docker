@@ -1,0 +1,9 @@
+version: "3"
+services:
+  face-app:
+    build: ./
+    privileged: true
+    volumes:
+      - /dev/video0:/dev/video0
+      - ./:/face-demo
+    network_mode: "host"
